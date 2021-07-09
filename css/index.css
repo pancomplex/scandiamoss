@@ -129,18 +129,20 @@ html {
 }
 .mainTit {
   font-size: 86px;
+  line-height: 86px;
   font-weight: 700;
 }
 .subTit {
   font-size: 55px;
+  line-height: 55px;
   font-weight: 300;
 }
 .mainTxt {
   font-size: 16px;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 25.6px;
 }
-#main_1 .mainTxt {
+.page_1 .mainTxt {
   font-size: 20px;
   line-height: 32px;
 }
@@ -182,16 +184,32 @@ html {
 }
 
 /* Color Setting */
-.page_odd {
+.page_1,
+.page_3,
+.page_5 {
   color: #fff;
 }
-.topMenu.page_odd {
-  color: rgba(255, 255, 255, 0.5);
-}
-.page_even {
+.page_2,
+.page_4 {
   color: #111;
 }
-.mainBg.page_even {
+
+.topMenu.page_1,
+.topMenu.page_3,
+.topMenu.page_5 {
+  color: rgba(255, 255, 255, 0.5);
+}
+.topMenu.page_2,
+.topMenu.page_4 {
+  color: #33333399;
+}
+.page_1 .mainTxt {
+  color: #ffffffd9;
+}
+.mainBg.page_2 {
+  background: #fff;
+}
+.mainBg.page_4 {
   background: #f3f3f3;
 }
 /* Frame Setting */
@@ -201,8 +219,6 @@ header {
   top: 0;
 }
 .header_inner {
-  width: 100%;
-  max-width: 1180px;
   height: 110px;
   margin: 0px auto;
   padding: 0 60px;
@@ -250,22 +266,21 @@ section {
   margin: 0px auto;
   padding: 0 100px;
 }
-#main_1 .section_inner {
+.page_1 .section_inner {
   padding-top: 150px;
 }
-#main_2 .section_inner,
-#main_3 .section_inner {
+.page_2 .section_inner,
+.page_3 .section_inner {
   text-align: center;
 }
-
-#main_4 .section_inner {
+.page_4 .section_inner {
   display: flex;
 }
-#main_4 .flex_left {
+.page_4 .flex_left {
   margin-right: 60px;
 }
-#main_2 .mainIndex,
-#main_3 .mainIndex {
+.page_2 .mainIndex,
+.page_3 .mainIndex {
   margin: 0 auto;
 }
 .mainTit,
@@ -275,8 +290,21 @@ section {
 .mainIcon {
   margin: 25px auto 15px;
 }
+.mainTxt {
+  margin: 13.6px 0;
+}
+.page_1 .mainTxt {
+  margin: 45px 0 30px;
+}
 .mainBtn {
   margin-top: 40px;
+}
+.page_1 .mainBtn {
+  margin-top: 0;
+}
+.newsBox_container {
+  margin-top: 50px;
+  height: 172px;
 }
 
 /* Images Setting */
@@ -287,10 +315,13 @@ section {
   background: url(/img/logo.png) no-repeat center;
   background-size: cover;
 }
-.topLogo.page_odd {
+.topLogo.page_1,
+.topLogo.page_3,
+.topLogo.page_5 {
   background: url(/img/logo.png) no-repeat center;
 }
-.topLogo.page_even {
+.topLogo.page_2,
+.topLogo.page_4 {
   background: url(/img/logo-b.png) no-repeat center;
 }
 .mainIndex {
@@ -307,7 +338,7 @@ section {
   background: url(/img/m02_icon.png) no-repeat center;
   background-size: cover;
 }
-#main_2 .mainIcon {
+.page_2 .mainIcon {
   transform: rotate(180deg);
 }
 .mainBtn {
@@ -335,7 +366,7 @@ section {
   background: url(/img/main_background_1.png) no-repeat center;
 }
 .mainBg.page_3 {
-  background: url(/img/main_background_3.png) no-repeat center;
+  background: url(/img/main_background_3.jpg) no-repeat center;
 }
 .mainBg.page_5 {
   background: url(/img/main_background_5.png) no-repeat center;
