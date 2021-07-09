@@ -29,73 +29,73 @@ button {
 /* Font Setting */
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Thin.ttf);
+  src: url(../font/BarlowSemiCondensed-Thin.ttf);
   font-style: normal;
   font-weight: 100;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-ExtraLight.ttf);
+  src: url(../font/BarlowSemiCondensed-ExtraLight.ttf);
   font-style: normal;
   font-weight: 200;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Light.ttf);
+  src: url(../font/BarlowSemiCondensed-Light.ttf);
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Regular.ttf);
+  src: url(../font/BarlowSemiCondensed-Regular.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Medium.ttf);
+  src: url(../font/BarlowSemiCondensed-Medium.ttf);
   font-style: normal;
   font-weight: 500;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-SemiBold.ttf);
+  src: url(../font/BarlowSemiCondensed-SemiBold.ttf);
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Bold.ttf);
+  src: url(../font/BarlowSemiCondensed-Bold.ttf);
   font-style: normal;
   font-weight: 700;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-ExtraBold.ttf);
+  src: url(../font/BarlowSemiCondensed-ExtraBold.ttf);
   font-style: normal;
   font-weight: 800;
 }
 @font-face {
   font-family: "Barlow Semi Condensed";
-  src: url(/font/BarlowSemiCondensed-Black.ttf);
+  src: url(../font/BarlowSemiCondensed-Black.ttf);
   font-style: normal;
   font-weight: 900;
 }
 @font-face {
   font-family: "NanumSquare";
-  src: url(/font/NanumSquareL.ttf);
+  src: url(../font/NanumSquareL.ttf);
   font-style: normal;
   font-weight: 100;
 }
 @font-face {
   font-family: "NanumSquare";
-  src: url(/font/NanumSquareR.ttf);
+  src: url(../font/NanumSquareR.ttf);
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "NanumSquare";
-  src: url(/font/NanumSquareB.ttf);
+  src: url(../font/NanumSquareB.ttf);
   font-style: bold;
   font-weight: 700;
 }
@@ -312,23 +312,23 @@ section {
 .topLogo.page_1,
 .topLogo.page_3,
 .topLogo.page_5 {
-  background: url(/img/logo.png) no-repeat center / cover;
+  background: url(../img/logo.png) no-repeat center / cover;
 }
 .topLogo.page_2,
 .topLogo.page_4 {
-  background: url(/img/logo-b.png) no-repeat center / cover;
+  background: url(../img/logo-b.png) no-repeat center / cover;
 }
 .mainIndex {
   width: 68px;
   height: 68px;
   line-height: 68px;
   text-align: center;
-  background: url(/img/m_circle.png) no-repeat center / cover;
+  background: url(../img/m_circle.png) no-repeat center / cover;
 }
 .mainIcon {
   width: 45px;
   height: 54px;
-  background: url(/img/m02_icon.png) no-repeat center / cover;
+  background: url(../img/m02_icon.png) no-repeat center / cover;
 }
 .page_2 .mainIcon {
   transform: rotate(180deg);
@@ -338,7 +338,7 @@ section {
   height: 66px;
   line-height: 66px;
   text-align: center;
-  background: url(/img/m01_btn.png) no-repeat center / cover;
+  background: url(../img/m01_btn.png) no-repeat center / cover;
   border: none;
 }
 .mainBg {
