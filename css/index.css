@@ -25,10 +25,6 @@ a {
 button {
   color: inherit;
 }
-a:hover,
-a:focus {
-  transition: 0.5s;
-}
 
 /* Font Setting */
 @font-face {
@@ -312,31 +308,27 @@ section {
   display: block;
   width: 133px;
   height: 65px;
-  background: url(img/logo.png) no-repeat center;
-  background-size: cover;
 }
 .topLogo.page_1,
 .topLogo.page_3,
 .topLogo.page_5 {
-  background: url(img/logo.png) no-repeat center;
+  background: url(/img/logo.png) no-repeat center / cover;
 }
 .topLogo.page_2,
 .topLogo.page_4 {
-  background: url(img/logo-b.png) no-repeat center;
+  background: url(/img/logo-b.png) no-repeat center / cover;
 }
 .mainIndex {
   width: 68px;
   height: 68px;
   line-height: 68px;
   text-align: center;
-  background: url(img/m_circle.png) no-repeat center;
-  background-size: cover;
+  background: url(/img/m_circle.png) no-repeat center / cover;
 }
 .mainIcon {
   width: 45px;
   height: 54px;
-  background: url(img/m02_icon.png) no-repeat center;
-  background-size: cover;
+  background: url(/img/m02_icon.png) no-repeat center / cover;
 }
 .page_2 .mainIcon {
   transform: rotate(180deg);
@@ -346,8 +338,7 @@ section {
   height: 66px;
   line-height: 66px;
   text-align: center;
-  background: url(img/m01_btn.png) no-repeat center;
-  background-size: cover;
+  background: url(/img/m01_btn.png) no-repeat center / cover;
   border: none;
 }
 .mainBg {
@@ -359,20 +350,25 @@ section {
   left: 0;
   width: 100%;
   height: 100vh;
-  background: url(img/main_background_1.png) no-repeat center;
-  background-size: cover;
 }
 .mainBg.page_1 {
-  background: url(img/main_background_1.png) no-repeat center;
+  background: url(../img/main_background_1.png) no-repeat center / cover;
 }
 .mainBg.page_3 {
-  background: url(img/main_background_3.jpg) no-repeat center;
+  background: url(../img/main_background_3.jpg) no-repeat center / cover;
 }
 .mainBg.page_5 {
-  background: url(img/main_background_5.png) no-repeat center;
+  background: url(../img/main_background_5.png) no-repeat center / cover;
 }
 
 /* Animation Setting */
+a:hover,
+a:focus {
+  transition: 0.5s;
+}
+.topMenu {
+  transition: 0.5s;
+}
 .topMenu .ko_txt {
   display: none;
 }
