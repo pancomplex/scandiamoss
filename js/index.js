@@ -24,10 +24,24 @@ let page_change = function () {
     .siblings()
     .children()
     .hide();
+  $(".mainBg")
+    .children(".page_" + page)
+    .addClass("on");
+  $(".mainBg")
+    .children(".page_" + page)
+    .siblings()
+    .not(".page_" + page)
+    .removeClass("on");
 
   if (page > 1) $(".gotopBtn").addClass("on");
   else $(".gotopBtn").removeClass("on");
 };
+
+// background text auto setting - 여기 작성중
+console.log("before:" + $(".txtBox_beneath").position().top);
+console.log($(".txtBox_beneath").height());
+$(".txtBox_beneath").position().top = -$(".txtBox_beneath").height();
+console.log("after:" + $(".txtBox_beneath").position().top);
 
 // menu list translate
 let dic = {
