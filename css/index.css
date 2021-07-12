@@ -239,12 +239,6 @@ html {
 .page_1 .mainTxt {
   color: #ffffffd9;
 }
-.mainBg.page_2 {
-  background: #fff;
-}
-.mainBg.page_4 {
-  background: #f3f3f3;
-}
 
 /* Color - burger menu */
 .main_burgerBtn {
@@ -307,7 +301,8 @@ header {
   line-height: 110px;
   position: relative;
 }
-.topMenu > li > a::after {
+.topMenu > li > a::after,
+.langOpt li a::after {
   content: "";
   display: block;
   width: 0;
@@ -391,18 +386,6 @@ section {
 .newsBox_container {
   margin-top: 50px;
   height: 172px;
-}
-
-/* Frame - background */
-.mainBg {
-  z-index: -999;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
 }
 
 /* Frame - burger menu */
@@ -578,6 +561,89 @@ section {
   background: url(../img/fo-sns03.png) no-repeat center;
 }
 
+/* BackGround */
+/* Frame - background */
+.mainBg {
+  z-index: -999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.txt_line {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+}
+.txtBox_on,
+.txtBox_beneath {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.txtBox_on {
+  transform: translateY(-150px);
+}
+.txt_on,
+.txt_beneath {
+  width: 100%;
+  height: 150px;
+  line-height: 100%;
+  padding-left: 98px;
+}
+.txt_beneath {
+  transform: translateY(-150px);
+}
+.mainBg.page_4 .txt_on {
+  transform: translateY(40px);
+}
+.mainBg.page_4 .txt_beneath {
+  transform: translateY(-110px);
+}
+
+/* Font - background */
+.mainBg {
+  font-size: 250px;
+  font-weight: 900;
+  letter-spacing: -3px;
+  white-space: nowrap;
+}
+.mainBg.page_4 {
+  font-size: 200px;
+}
+
+/* Color - background */
+.txt_line {
+  background-color: rgba(185, 185, 185, 0.2);
+}
+.txtBox_on,
+.txtBox_beneath {
+  color: inherit;
+}
+.mainBg.page_1 {
+  color: rgba(235, 235, 235, 0.04);
+}
+.mainBg.page_2 {
+  color: rgba(33, 33, 33, 0.06);
+  background: #fff;
+}
+.mainBg.page_3 {
+  color: rgba(235, 235, 235, 0.04);
+}
+.mainBg.page_4 {
+  color: rgba(33, 33, 33, 0.06);
+  background: #f3f3f3;
+}
+.mainBg.page_5 {
+  color: rgba(247, 247, 247, 0.1);
+}
+
 /*  Go Top Btn */
 .gotopBtn {
   width: 50px;
@@ -618,6 +684,9 @@ a:focus {
 }
 .topMenu li:hover > a::after {
   width: 100%;
+}
+.langOpt li:hover a::after {
+  width: 20px;
 }
 .topMenu.page_1 > li:hover,
 .topMenu.page_3 > li:hover,
@@ -683,6 +752,24 @@ a:focus {
 
 .burgerSub {
   display: none;
+}
+
+/* Animation - background */
+.mainBg > div:nth-child(n + 2) {
+  opacity: 0;
+}
+.mainBg div {
+  transition: 0.8s;
+}
+.txtBox_on {
+  transform: translate(-50px);
+}
+.txtBox_beneath {
+  transform: translateX(50px);
+}
+.mainBg div.on {
+  transform: translateX(0);
+  opacity: 1;
 }
 
 /* Animation - Go Top Btn */
