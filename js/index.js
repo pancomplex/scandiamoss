@@ -8,6 +8,7 @@ let page_change = function () {
   let win_height = $(window).height();
   let page = Math.round(scroll_top / win_height) + 1;
 
+  // page change - page style
   $(".mainBg")
     .removeClass()
     .addClass("mainBg page_" + page);
@@ -17,6 +18,8 @@ let page_change = function () {
   $(".topMenu")
     .removeClass()
     .addClass("topMenu page_" + page);
+
+  // page change - section contents
   $("section.page_" + page)
     .children()
     .show();
@@ -24,6 +27,8 @@ let page_change = function () {
     .siblings()
     .children()
     .hide();
+
+  // page change - background text
   $(".mainBg")
     .children(".page_" + page)
     .addClass("on");
@@ -33,15 +38,31 @@ let page_change = function () {
     .not(".page_" + page)
     .removeClass("on");
 
+  // page change - side bar
+  $(".side_bar").css("transform", "translateY(-" + (-9 + page * 16) + "px)");
+  $(".side_bar li")
+    .eq(page - 1)
+    .addClass("act")
+    .siblings()
+    .removeClass("act");
+
   if (page > 1) $(".gotopBtn").addClass("on");
   else $(".gotopBtn").removeClass("on");
 };
 
 // background text auto setting - 여기 작성중
-console.log("before:" + $(".txtBox_beneath").position().top);
-console.log($(".txtBox_beneath").height());
-$(".txtBox_beneath").position().top = -$(".txtBox_beneath").height();
-console.log("after:" + $(".txtBox_beneath").position().top);
+let Box_on_top = $(".txtBox_on").position().top;
+let Box_on_height = $(".txtBox_on").height();
+$(".txtBox_on").css("top", Box_on_top - Box_on_height);
+let txt_beneath_top = $(".txt_beneath").position().top;
+let txt_beneath_height = $(".txt_beneath").height();
+$(".txt_beneath").css("top", txt_beneath_top - txt_beneath_height);
+let txt_on_top_4 = $(".page_4 .txt_on").position().top;
+let txt_on_height_4 = $(".page_4 .txt_on").height();
+$(".page_4 .txt_on").css("top", txt_on_top_4 + txt_on_height_4 / 4);
+let txt_beneath_top_4 = $(".page_4 .txt_beneath").position().top;
+let txt_beneath_height_4 = $(".page_4 .txt_beneath").height();
+$(".page_4 .txt_beneath").css("top", txt_beneath_top_4 + txt_beneath_height_4 / 4);
 
 // menu list translate
 let dic = {
@@ -83,3 +104,12 @@ $(".topMenu li, .burgerMenu li")
 $(".main_burgerBtn").on("click", function () {
   $(".main_burgerBtn, .burger_container, .topMenu").toggleClass("act");
 });
+
+// burger submenu active
+$(".burgerMenu>li")
+  .last()
+  .on("click", function () {
+    $(".burgerSub").toggleClass("act");
+  });
+
+// news box (미구현)
