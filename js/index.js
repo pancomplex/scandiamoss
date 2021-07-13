@@ -50,19 +50,17 @@ let page_change = function () {
   else $(".gotopBtn").removeClass("on");
 };
 
-// background text auto setting - 여기 작성중
-let Box_on_top = $(".txtBox_on").position().top;
-let Box_on_height = $(".txtBox_on").height();
-$(".txtBox_on").css("top", Box_on_top - Box_on_height);
-let txt_beneath_top = $(".txt_beneath").position().top;
-let txt_beneath_height = $(".txt_beneath").height();
-$(".txt_beneath").css("top", txt_beneath_top - txt_beneath_height);
-let txt_on_top_4 = $(".page_4 .txt_on").position().top;
-let txt_on_height_4 = $(".page_4 .txt_on").height();
-$(".page_4 .txt_on").css("top", txt_on_top_4 + txt_on_height_4 / 4);
-let txt_beneath_top_4 = $(".page_4 .txt_beneath").position().top;
-let txt_beneath_height_4 = $(".page_4 .txt_beneath").height();
-$(".page_4 .txt_beneath").css("top", txt_beneath_top_4 + txt_beneath_height_4 / 4);
+// background textbox auto setting
+let re_size = function () {
+  let bg_height = $(".mainBg").height();
+  let Box_on_height = $(".txtBox_on").height();
+  $(".txtBox_on").css("top", bg_height / 2 - Box_on_height);
+};
+re_size();
+
+$(window).resize(function () {
+  re_size();
+});
 
 // menu list translate
 let dic = {
