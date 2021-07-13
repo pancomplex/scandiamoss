@@ -360,6 +360,7 @@ section {
   max-width: 1180px;
   margin: 0px auto;
   padding: 0 100px;
+  overflow-x: hidden;
 }
 .page_1 .section_inner {
   padding-top: 150px;
