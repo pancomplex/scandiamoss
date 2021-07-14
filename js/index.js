@@ -18,6 +18,9 @@ let page_change = function () {
   $(".topMenu")
     .removeClass()
     .addClass("topMenu page_" + page);
+  $(".btn_arrow")
+    .removeClass("page_1 page_2 page_3 page_4 page_5")
+    .addClass("page_" + page);
 
   // page change - section contents
   $("section.page_" + page)
