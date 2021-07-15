@@ -7,6 +7,9 @@ let page_change = function () {
   let scroll_top = $(document).scrollTop();
   let win_height = $(window).height();
   let page = Math.round(scroll_top / win_height) + 1;
+  if (page > 5) {
+    page = 5;
+  }
 
   // page change - page style
   $(".mainBg")
