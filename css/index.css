@@ -775,7 +775,7 @@ section {
 }
 .txtBox_on,
 .txtBox_beneath {
-  position: fixed;
+  position: absolute;
   top: 50%;
   width: 100%;
   height: 200px;
