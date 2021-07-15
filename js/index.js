@@ -10,21 +10,17 @@ $(".test").css({
   border: "2px solid #ccc",
 });
 $(document).on("scroll", function () {
-  let test1 = window.height;
   let test2 = window.innerHeight;
   let test3 = $(window).height();
   let test4 = $("section").height();
   $(".test").html(
-    "<p>window.height:" +
-      test1 +
-      "<br>" +
-      "indow.innerHeight:" +
+    "<p>window.innerHeight:" +
       test2 +
       "<br>" +
       "$(window).height():" +
       test3 +
       "<br>" +
-      '$("section").height():' +
+      "100vh:" +
       test4 +
       "<br>" +
       $(document).scrollTop() +
@@ -38,7 +34,7 @@ $(document).on("scroll", function () {
 
 let page_change = function () {
   let scroll_top = $(document).scrollTop();
-  let page_height = window.innerHeight;
+  let page_height = $("section").height();
   let page = Math.round(scroll_top / page_height) + 1;
   if (page > 5) {
     page = 5;
