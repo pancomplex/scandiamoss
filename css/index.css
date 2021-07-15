@@ -768,7 +768,7 @@ section {
   height: 100vh;
 }
 .txt_line {
-  position: fixed;
+  position: absolute;
   top: 50%;
   width: 100%;
   height: 1px;
@@ -795,8 +795,17 @@ section {
 .txt_beneath {
   bottom: 5%;
 }
-.side_bar {
+.side_bar_wrapper {
   position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+}
+.side_bar {
+  position: absolute;
   top: 50%;
   transform: translateY(-7px);
   left: 3.5vw;
