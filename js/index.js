@@ -5,8 +5,8 @@ $(document).on("scroll", function () {
 
 let page_change = function () {
   let scroll_top = $(document).scrollTop();
-  let win_height = $(window).height();
-  let page = Math.round(scroll_top / win_height) + 1;
+  let page_height = $("section").height();
+  let page = Math.round(scroll_top / page_height) + 1;
   if (page > 5) {
     page = 5;
   }
