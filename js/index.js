@@ -22,8 +22,12 @@ $(document).on("scroll", function () {
       "<br>" +
       "100vh:" +
       test4 +
-      "<br>" +
+      "<br><br>" +
+      "$(document).scrollTop():" +
       $(document).scrollTop() +
+      "<br>" +
+      "window.pageYOffset:" +
+      window.pageYOffset +
       "</p>"
   );
 });
