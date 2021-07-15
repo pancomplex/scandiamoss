@@ -1,37 +1,4 @@
 // page change
-$(".test").css({
-  width: "200px",
-  height: "150px",
-  "background-color": "#fff",
-  "z-index": "99999",
-  position: "fixed",
-  top: "50px",
-  left: "50px",
-  border: "2px solid #ccc",
-});
-$(document).on("scroll", function () {
-  let test2 = window.innerHeight;
-  let test3 = $(window).height();
-  let test4 = $("section").height();
-  $(".test").html(
-    "<p>window.innerHeight:" +
-      test2 +
-      "<br>" +
-      "$(window).height():" +
-      test3 +
-      "<br>" +
-      "100vh:" +
-      test4 +
-      "<br><br>" +
-      "$(document).scrollTop():" +
-      $(document).scrollTop() +
-      "<br>" +
-      "window.pageYOffset:" +
-      window.pageYOffset +
-      "</p>"
-  );
-});
-
 $(document).on("scroll", function () {
   page_change();
 });

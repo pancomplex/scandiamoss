@@ -877,6 +877,7 @@ section {
 .burger_container {
   width: 370px;
   border-left: 1px solid #f1f1f1;
+  box-sizing: border-box;
   position: fixed;
   top: 0;
   right: -370px;
