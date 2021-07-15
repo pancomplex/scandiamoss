@@ -701,6 +701,8 @@ section {
   width: 375px;
   height: 22px;
   padding: 14px 50px;
+}
+.newsItem a {
   display: flex;
 }
 @media only screen and (max-width: 767px) {
